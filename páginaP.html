@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Inicial</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .coluna {
+      width: 30%;
+      padding: 20px;
+      box-sizing: border-box;
+      margin: 20px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .coluna img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .titulo {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .menu {
+      display: none;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+    }
+
+    .menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu ul li {
+      padding: 10px;
+    }
+
+    .menu ul li a {
+      color: #fff; /* Alterando a cor dos links */
+      text-decoration: none;
+    }
+
+    .menu-toggle {
+      display: block;
+      cursor: pointer;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 999;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 30px;
+      height: 5px;
+      background-color: #fff;
+      margin-bottom: 5px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .coluna {
+        width: 100%;
+      }
+
+      .menu {
+        display: block;
+      }
+
+      .container {
+        padding-top: 60px;
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      .titulo {
+        font-size: 20px;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Responsividade com Media Queries</h1>
+  </header>
+  <div class="menu-toggle">
+    <nav>
+      <ul>
+        <!-- Alterando as cores dos links -->
+        <li><a href="páginaP.html" style="color: white;">Página Inicial</a></li>
+        <li><a href="index.html" style="color: white;">Exemplos</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container">
+    <div class="coluna">
+      <h2 class="titulo">O que é?</h2>
+      <p>A responsividade com media queries refere-se à capacidade de um site se adaptar a diferentes dispositivos e tamanhos de tela, proporcionando uma experiência de usuário consistente e otimizada em diversos dispositivos, como smartphones, tablets e desktops.</p>
+    </div>
+    <div class="coluna">
+      <h2 class="titulo">Pra que serve?</h2>
+      <p>Serve para garantir que o conteúdo do site seja apresentado de forma legível e utilizável, independentemente do dispositivo usado para acessá-lo. Isso melhora a experiência do usuário e aumenta a acessibilidade do site.</p>
+    </div>
+    <div class="coluna">
+      <h2 class="titulo">Qual problema resolve?</h2>
+      <p>Antes da adoção de técnicas responsivas, os sites geralmente eram projetados apenas para serem visualizados em dispositivos de tamanho padrão, o que resultava em problemas de legibilidade e usabilidade em dispositivos com telas menores ou maiores.
+    </p>
+    </div>
+    <div class="coluna">
+      <h2 class="titulo">Quais as vantagens?</h2>
+      <p><h3>Vantagens:</h3>
+
+        Experiência do usuário aprimorada: Os usuários podem acessar o site de qualquer dispositivo, sem comprometer a qualidade da experiência.
+        Acessibilidade: Facilita o acesso ao conteúdo do site em diferentes dispositivos, incluindo pessoas com deficiência visual.
+        SEO melhorado: Sites responsivos tendem a ter melhor desempenho nos resultados de pesquisa, já que o Google prioriza sites otimizados para dispositivos móveis.</p>
+    </div>
+    <div class="coluna">
+      <h2 class="titulo">Quais as desvantagens?</h2>
+      <p><h3>Desvantagens:</h3>
+
+        Complexidade: Implementar responsividade pode ser mais complexo do que criar um site exclusivamente para desktop.
+        Desempenho: Em alguns casos, o carregamento de recursos adicionais para dispositivos específicos pode afetar o desempenho do site, especialmente em conexões de internet mais lentas.
+    </p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Responsividade com Media Queries</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: left;
+      display: flex;
+      justify-content: space-between; 
+      align-items: center; 
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .coluna {
+      float: left;
+      width: 33.33%;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    .coluna img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .titulo {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    .menu {
+      display: block;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+
+  
+    .menu a {
+      color: white;
+      text-decoration: none;
+    }
+
+    
+    .titulo-centralizado {
+      margin: 0 auto; 
+    }
+
+    @media screen and (max-width: 600px) {
+      .coluna {
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .menu {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      .titulo {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+  
+    <nav class="menu">
+      <ul>
+        <li><a href="páginaP.html">Página Inicial</a></li>
+        <li><a href="index.html">Exemplos</a></li>
+      </ul>
+    </nav>
+    <h1 class="titulo titulo-centralizado">Exemplo de Responsividade com Media Queries</h1>
+  </header>
+  <div class="container">
+    <div class="coluna">
+      <h2 class="titulo">Exemplo 1: Layout de Colunas Flexíveis</h2>
+      <p>Este exemplo demonstra como o layout de colunas pode se ajustar em dispositivos com tela pequena:</p>
+      <img src="Captura de tela de 2024-04-11 09-04-12.png" alt="Exemplo 1">
+    </div>
+
+    <div class="coluna">
+      <h2 class="titulo">Exemplo 2: Ocultando Elementos</h2>
+      <p>Aqui mostramos como ocultar elementos em dispositivos com tela pequena:</p>
+      <img src="captura2.png" alt="Exemplo 2">
+    </div>
+
+    <div class="coluna">
+      <h2 class="titulo">Exemplo 3: Tamanhos de Fonte Adaptáveis</h2>
+      <p>Este exemplo ajusta o tamanho da fonte em dispositivos menores para melhor legibilidade:</p>
+      <img src="captura3.png" alt="Exemplo 3">
+    </div>
+
+    <div class="coluna">
+      <h2 class="titulo">Exemplo 4: Grid Responsivo</h2>
+      <p>Um exemplo de layout utilizando grid responsivo para se ajustar a diferentes tamanhos de tela.</p>
+      <img src="Captura de tela de 2024-04-11 21-07-32.png" alt="Exemplo 4">
+    </div>
+
+    <div class="coluna">
+      <h2 class="titulo">Exemplo 5: Menu Hamburguer</h2>
+      <p>Implementação de um menu hamburguer para dispositivos móveis.</p>
+      <img src="Captura de tela de 2024-04-11 21-12-27.png" alt="Exemplo 5">
+    </div>
+
+    <div class="coluna">
+      <h2 class="titulo">Exemplo 6: Tipografia Adaptável</h2>
+      <p>Utilização de tipografia adaptável para proporcionar uma melhor experiência de leitura em dispositivos variados.</p>
+      <img src="Captura de tela de 2024-04-11 21-18-15.png" alt="Exemplo 6">
+    </div>
+  </div>
+
+</body>
+</html>
