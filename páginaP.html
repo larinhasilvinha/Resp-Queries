@@ -14,8 +14,9 @@
     header {
       background-color: #333;
       color: #fff;
-      padding: 20px;
+      padding: 38px;
       text-align: center;
+      font-size: large;
     }
 
     .container {
@@ -44,7 +45,7 @@
     }
 
     .titulo {
-      font-size: 24px;
+      font-size: 28px;
       margin-bottom: 10px;
     }
 
@@ -57,6 +58,7 @@
       top: 60px;
       left: 0;
       width: 100%;
+      text-align: center;
     }
 
     .menu ul {
@@ -70,7 +72,7 @@
     }
 
     .menu ul li a {
-      color: #fff; /* Alterando a cor dos links */
+      color: #fff;
       text-decoration: none;
     }
 
@@ -78,8 +80,8 @@
       display: block;
       cursor: pointer;
       position: fixed;
-      top: 20px;
-      left: 20px;
+      top: 38px;
+      left: 45px;
       z-index: 999;
     }
 
@@ -103,11 +105,15 @@
       .container {
         padding-top: 60px;
       }
+
+      .menu-toggle {
+        display: block;
+      }
     }
 
     @media screen and (max-width: 1024px) {
       .titulo {
-        font-size: 20px;
+        font-size: 50px;
       }
     }
 
@@ -125,14 +131,16 @@
   <header>
     <h1>Responsividade com Media Queries</h1>
   </header>
-  <div class="menu-toggle">
-    <nav>
-      <ul>
-        <!-- Alterando as cores dos links -->
-        <li><a href="páginaP.html" style="color: white;">Página Inicial</a></li>
-        <li><a href="index.html" style="color: white;">Exemplos</a></li>
-      </ul>
-    </nav>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="menu" id="menu">
+    <ul>
+      <li><a href="páginaP.html">Página Inicial</a></li>
+      <li><a href="index.html">Exemplos</a></li>
+    </ul>
   </div>
   <div class="container">
     <div class="coluna">
@@ -145,13 +153,11 @@
     </div>
     <div class="coluna">
       <h2 class="titulo">Qual problema resolve?</h2>
-      <p>Antes da adoção de técnicas responsivas, os sites geralmente eram projetados apenas para serem visualizados em dispositivos de tamanho padrão, o que resultava em problemas de legibilidade e usabilidade em dispositivos com telas menores ou maiores.
-    </p>
+      <p>Antes da adoção de técnicas responsivas, os sites geralmente eram projetados apenas para serem visualizados em dispositivos de tamanho padrão, o que resultava em problemas de legibilidade e usabilidade em dispositivos com telas menores ou maiores.</p>
     </div>
     <div class="coluna">
       <h2 class="titulo">Quais as vantagens?</h2>
       <p><h3>Vantagens:</h3>
-
         Experiência do usuário aprimorada: Os usuários podem acessar o site de qualquer dispositivo, sem comprometer a qualidade da experiência.
         Acessibilidade: Facilita o acesso ao conteúdo do site em diferentes dispositivos, incluindo pessoas com deficiência visual.
         SEO melhorado: Sites responsivos tendem a ter melhor desempenho nos resultados de pesquisa, já que o Google prioriza sites otimizados para dispositivos móveis.</p>
@@ -159,12 +165,21 @@
     <div class="coluna">
       <h2 class="titulo">Quais as desvantagens?</h2>
       <p><h3>Desvantagens:</h3>
-
         Complexidade: Implementar responsividade pode ser mais complexo do que criar um site exclusivamente para desktop.
-        Desempenho: Em alguns casos, o carregamento de recursos adicionais para dispositivos específicos pode afetar o desempenho do site, especialmente em conexões de internet mais lentas.
-    </p>
+        Desempenho: Em alguns casos, o carregamento de recursos adicionais para dispositivos específicos pode afetar o desempenho do site, especialmente em conexões de internet mais lentas.</p>
     </div>
   </div>
 
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'block';
+      }
+    }
+  </script>
 </body>
 </html>
+
