@@ -14,83 +14,141 @@
     header {
       background-color: #333;
       color: #fff;
-      padding: 20px;
-      text-align: left;
+      padding: 56px;
       display: flex;
-      justify-content: space-between; 
-      align-items: center; 
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      font-size: large;
+    }
+
+    .menu {
+      display: none;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      position: absolute;
+      top: 60px; 
+      left: 30px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu ul li {
+      padding: 10px 0;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .menu-toggle {
+      display: block;
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 30px;
+      height: 5px;
+      background-color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .titulo-centralizado {
+      font-size: 39px;
+      margin: 0 auto;
+      margin-left: 22%; 
     }
 
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .coluna {
-      float: left;
-      width: 33.33%;
+      flex: 1 1 30%;
       padding: 15px;
       box-sizing: border-box;
+      margin: 15px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
     }
 
     .coluna img {
       max-width: 100%;
       height: auto;
+      border-radius: 8px;
     }
 
     .titulo {
-      font-size: 35px;
+      font-size: 24px;
       margin-bottom: 10px;
-    }
-
-    .menu {
-      display: block;
-      background-color: #333;
-      color: #fff;
-      padding: 10px;
-    }
-
-  
-    .menu a {
-      color: white;
-      text-decoration: none;
-    }
-
-    
-    .titulo-centralizado {
-      margin: 0 auto; 
-    }
-
-    @media screen and (max-width: 600px) {
-      .coluna {
-        width: 100%;
-      }
-    }
-
-    @media screen and (max-width: 768px) {
-      .menu {
-        display: none;
-      }
     }
 
     @media screen and (max-width: 1024px) {
       .titulo {
         font-size: 20px;
       }
+
+      .titulo-centralizado {
+        font-size: 24px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .menu ul li {
+        margin: 10px 0;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .coluna {
+        flex: 1 1 100%;
+      }
+
+      .titulo {
+        font-size: 18px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-  
-    <nav class="menu">
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <h1 class="titulo-centralizado">Exemplos de Responsividade com Media Queries</h1>
+    <nav class="menu" id="menu">
       <ul>
         <li><a href="páginaP.html">Página Inicial</a></li>
         <li><a href="index.html">Exemplos</a></li>
       </ul>
     </nav>
-    <h1 class="titulo titulo-centralizado">Exemplo de Responsividade com Media Queries</h1>
   </header>
   <div class="container">
     <div class="coluna">
@@ -130,5 +188,15 @@
     </div>
   </div>
 
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'block';
+      }
+    }
+  </script>
 </body>
 </html>
